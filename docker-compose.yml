@@ -16,6 +16,7 @@ services:
       context: ./primekey
       dockerfile: Dockerfile
     restart: on-failure
+    hostname: myca
     volumes:
       - pki-data:/mnt/persistent
     depends_on:
@@ -35,9 +36,3 @@ networks:
   database:
     internal: true
   web-facing:
-    driver: bridge
-    external: false
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.28.0.0/16
