@@ -36,5 +36,5 @@ LANG=eng
 CANAME=EvilCorpCA  
 EMAIL=user@example.com  
 DATABASE_JDBC_URL=jdbc:postgresql://db/ejbca  
-DATABASE_USER=ejbca  **```[if you changed the entry above this entry MUST match that one]```**  
-DATABASE_PASSWORD=ejbca  **```[if you changed the entry above this entry MUST match that one]```**
+DATABASE_USER=ejbca  **```[This entry MUST match POSTGRES_DB]```**  
+DATABASE_PASSWORD=ejbca  **```[This entry MUST match POSTGRES_PASSWORD]```**
