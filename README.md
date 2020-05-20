@@ -14,11 +14,12 @@ In order to run the container just run `docker-compose up`.  That will start the
 In order to customize the CA go to the pki.env and db.env files and modify the data accordingly then run the above 'docker-compose up' command again
 
 ### db.env
-POSTGRES_DB=ejbca ```[default entry to modify]```  
-POSTGRES_USER=ejbca ```[default entry to modify]```  
-POSTGRES_PASSWORD=ejbca ```[default entry to modify]```  
-POSTGRES_INITDB_ARGS='--encoding=UTF-8'  
+POSTGRES_DB=ejbca  
+POSTGRES_USER=ejbca  
+POSTGRES_PASSWORD=ejbca  
+POSTGRES_INITDB_ARGS='--encoding=UTF-8' ```[DO NOT MODIFY]```  
 
+## Be sure you know what ALL of the options below do prior to modifying them!
 ### pki.env
 TLS_SETUP_ENABLED=false  
 ORGANIZATION_UNIT=IT  
@@ -27,7 +28,7 @@ STATE=SOMEWHERE
 COUNTRY=SOMEWHERE  
 PRODUCTION=true  
 DYNCONFIG=true  
-SUPER=CAADMIN <-- THIS IS THE ADMINISTRATOR OF THE CA 
+SUPER=CAADMIN **<-- THIS IS THE ADMINISTRATOR OF THE CA**  
 LANGS=eng  
 DOCS=https://www.ejbca.org/docs  
 ERRORNOTIFY=There was an error with the application  
