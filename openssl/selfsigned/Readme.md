@@ -21,6 +21,14 @@
 
 ## HSM
 
+# EJBCA Authentication fri admin web
+
+* Use this docker image -> generate admin user see pki.env
+* in public web, generate certificate in the browser
+  * import certificate
+  * close and reopen browser
+  * authentication must work
+
 # SubCA signed with an external CA
 
 ## EJBCA
