@@ -82,6 +82,11 @@ openssl verify -verbose  -CAfile root.crt  %CN%.crt
 
 ##  Use SOAP
 
+## Tools
+
+* [wsdl](https://www.wsdl-analyzer.com/?modal=true)
+* [Soap client](https://chrome.google.com/webstore/detail/boomerang-soap-rest-clien/eipdnjedkpcnlmmdfdkgfpljanehloah?hl=fr-fr)
+
 ## EJBCA
 
 * Create end user
