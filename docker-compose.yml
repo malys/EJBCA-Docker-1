@@ -1,26 +1,27 @@
 version: "3.7"
 services:
-  db:
-    image: postgres:latest
-    restart: on-failure
-    env_file:
-      - db.env
-    volumes:
-      - db-data:/var/lib/postgresql/data
-    expose:
-      - "5432"
-    networks:
-      - database
+#  db:
+#    image: postgres:latest
+#    restart: on-failure
+#    env_file:
+#      - db.env
+#    volumes:
+#      - db-data:/var/lib/postgresql/data
+#    expose:
+#      - "5432"
+#    networks:
+#      - database
   pki:
     build:
       context: ./primekey
       dockerfile: Dockerfile
     restart: on-failure
-    hostname: myca
+    hostname: localhost
     volumes:
-      - pki-data:/mnt/persistent
-    depends_on:
-      - db
+      - ./db:/mnt/persistent
+      - D:\Developpement\archi\lyra-keystore\ejbca-docker-build\ejbca_src\modules\dist\ejbca-ws-ejb.jar:/opt/primekey/ejbca/dist/ejbca.ear/ejbca-ws-ejb.jar
+#    depends_on:
+#      - db
     env_file:
       - pki.env
     ports:
@@ -29,9 +30,6 @@ services:
     networks:
       - web-facing
       - database
-volumes:
-  pki-data:
-  db-data:
 networks:
   database:
     internal: true
