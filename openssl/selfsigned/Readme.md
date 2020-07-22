@@ -1,8 +1,9 @@
-# Use cases
+# Use cases summary
 
-## External CA
+##  SubCA signed with an external CA
 
 [X] Create certificate signed by external CA
+
     * CSR generation
     * Signed CSR
 
@@ -25,7 +26,9 @@
 
 [] Bull C2P HSM integration
 
-# EJBCA Authentication from admin web
+# Steps
+
+## EJBCA Authentication from admin web
 
 * Use this docker image -> generate admin user see pki.env
 * in public web, generate certificate in the browser
@@ -33,9 +36,9 @@
   * close and reopen browser
   * authentication must work
 
-# SubCA signed with an external CA
+## SubCA signed with an external CA
 
-## EJBCA
+### EJBCA
 
 * Add Certication authorities
   * Signed By EXTERNAL CA	
@@ -47,7 +50,7 @@
   * Certificate Profile: Profile
   * CA: new CA signed by external
 
-## External CA signing
+### External CA for signing
 
 ``` cmd
 # https://whatsmychaincert.com/?getacert.com
@@ -84,27 +87,26 @@ cat %CN%.crt root.crt   > %CN%Chain.crt
 openssl verify -verbose  -CAfile root.crt  %CN%.crt
 ```
 
-##  Use SOAP
+### Use SOAP API
 
-## Tools
+### Tools
 
 * [wsdl](https://www.wsdl-analyzer.com/?modal=true)
 * [Soap client](https://chrome.google.com/webstore/detail/boomerang-soap-rest-clien/eipdnjedkpcnlmmdfdkgfpljanehloah?hl=fr-fr)
 
-## EJBCA
+### EJBCA
 
 * Create end user
-* Select CA signed by External CA
-  * 
+* Select CA signed by External CA 
 
-## Chrome boomerang
+### Chrome boomerang
 
 * Install boomerang in chrome to use browser certificate authentication
 * Import service *https://localhost/ejbca/ejbcaws/ejbcaws?wsdl*
 * create requests (remove ALWAYS SOAPACTION header)
 
 
-### Examples
+#### Examples
 
 * List of CA
 ```xml
