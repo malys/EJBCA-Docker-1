@@ -3,6 +3,8 @@
 ## External CA
 
 [X] Create certificate signed by external CA
+    * CSR generation
+    * Signed CSR
 
 [X] Download certificate from SOAP API
 [] Use it in Java application ->
@@ -21,7 +23,9 @@
 
 ## HSM
 
-# EJBCA Authentication fri admin web
+[] Bull C2P HSM integration
+
+# EJBCA Authentication from admin web
 
 * Use this docker image -> generate admin user see pki.env
 * in public web, generate certificate in the browser
