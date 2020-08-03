@@ -19,7 +19,6 @@ services:
     hostname: localhost
     volumes:
       - ./db:/mnt/persistent
-      - D:\Developpement\archi\lyra-keystore\ejbca-docker-build\ejbca_src\modules\dist\ejbca-ws-ejb.jar:/opt/primekey/ejbca/dist/ejbca.ear/ejbca-ws-ejb.jar
 #    depends_on:
 #      - db
     env_file:
